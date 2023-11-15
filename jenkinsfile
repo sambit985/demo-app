@@ -2,7 +2,8 @@ pipeline {
     agent any
 
     environment {
-       PATH = "$PATH:/root/.nvm/versions/node/v18.18.2/bin/node"
+    
+        PATH = "/root/.nvm/versions/node/v18.18.2/bin:$PATH"
         SSH_COMMAND = "ssh -i /var/lib/jenkins/.ssh/id_rsa"
     }
     stages {
@@ -19,8 +20,7 @@ pipeline {
      steps {
          script {
              echo 'Installing dependencies...'
-              sh 'bash -c "source /root/.nvm/nvm.sh && nvm use 18 && npm install"'
-
+              sh 'nvm use 18 && npm install'
              echo 'Building the app...'
              sh 'npm run build'
          }
