@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         PATH = "$PATH:/usr/bin/node"
+         PATH = "$PATH:/home/ubuntu/.nvm/versions/node/v18.18.2/bin"
         SSH_COMMAND = "ssh -i /var/lib/jenkins/.ssh/id_rsa"
     }
 
