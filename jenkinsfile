@@ -19,7 +19,7 @@ pipeline {
      steps {
          script {
              echo 'Installing dependencies...'
-              sh 'source /root/.nvm/nvm.sh && nvm use 18 && npm install'
+              sh 'bash -c "source /root/.nvm/nvm.sh && nvm use 18 && npm install"'
 
              echo 'Building the app...'
              sh 'npm run build'
