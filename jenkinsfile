@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-       PATH = "$PATH:/home/ubuntu/.nvm/versions/node/v18.18.2/bin/node"
+       PATH = "$PATH:/root/.nvm/versions/node/v18.18.2/bin/node"
         SSH_COMMAND = "ssh -i /var/lib/jenkins/.ssh/id_rsa"
     }
     stages {
