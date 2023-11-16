@@ -22,18 +22,7 @@ pipeline {
              sh 'npm run build'
          }
      }
- }
-
-        /*  stage('Update Browserslist') {
-            steps {
-                script {
-                    echo 'Updating Browserslist database...'
-                    sh 'npx browserslist@latest --update-db'
-                }
-            }
-        } */
-
-     
+ }   
     }
 
 }
