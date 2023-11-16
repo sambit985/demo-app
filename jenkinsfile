@@ -20,7 +20,8 @@ pipeline {
      steps {
          script {
              echo 'Installing dependencies...'
-              sh 'nvm use 18 && npm install'
+              sh 'nvm use 18'
+              sh 'npm install'
              echo 'Building the app...'
              sh 'npm run build'
          }
