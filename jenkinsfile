@@ -3,7 +3,7 @@ pipeline {
 
     environment {
     
-        PATH = "/root/.nvm/versions/node/v18.18.2/bin:$PATH"
+        PATH = "/var/lib/jenkins/.nvm/versions/node/v18.18.2/bin:$PATH"
         SSH_COMMAND = "ssh -i /var/lib/jenkins/.ssh/id_rsa"
     }
     stages {
@@ -20,8 +20,6 @@ pipeline {
      steps {
          script {
              echo 'Installing dependencies...'
-                echo `env`
-                echo "$PATH"
               sh 'npm install'
              echo 'Building the app...'
              sh 'npm run build'
