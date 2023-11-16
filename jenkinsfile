@@ -20,6 +20,7 @@ pipeline {
      steps {
          script {
              echo 'Installing dependencies...'
+                env
                 echo "$PATH"
               sh 'npm install'
              echo 'Building the app...'
