@@ -37,6 +37,7 @@ pipeline {
       stage('SonarQube analysis') {
             steps {
                 withSonarQubeEnv('sonar') {
+                   sh "npm i -g browserslist caniuse-lite"
                     sh "npm install sonar-scanner"
                     sh "npm run sonar-scanner"
                 }
